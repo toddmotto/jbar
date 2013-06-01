@@ -1,0 +1,70 @@
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+
+*,
+*:after,
+*:before {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+body {
+	font:400 13px/1.4 'Helvetica Neue', Helvetica, Arial;
+	background:#ECF0F1;
+}
+p {
+	margin:0 0 10px;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+.wrapper {
+	max-width:1280px;
+	margin:0 auto;
+}
+.header {
+	padding:15px 25px;
+	background:#FFF;
+	border-left:5px solid #2BA6CB;
+	overflow:hidden;
+}
+.logo {
+	float:left;
+}
+.logo-img {
+	width:80px;
+	height:36px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAkCAYAAAAeor16AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTU2MUFBRDE3QUM3MTFFMkJBN0NBQzc2NjA3OTdCODMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTU2MUFBRDI3QUM3MTFFMkJBN0NBQzc2NjA3OTdCODMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNTYxQUFDRjdBQzcxMUUyQkE3Q0FDNzY2MDc5N0I4MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNTYxQUFEMDdBQzcxMUUyQkE3Q0FDNzY2MDc5N0I4MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoraP4AAAAUUSURBVHja7FoxcNtWDP1Os5tjtzKeupXasoW+8x5l62Zp7NRozCRn6yZp6yZlzCRpS+98J3brZmZrF4feMjJjpgRwH+7gX3ySol2JuRPu/lEiif+B9/HxAXwenZ2dXTjnxu5fKqmNLi8vF27HRHJs6JIqOU5Jjrwlf0HtxTb8bemR9z+iNnH7J5ZjeQ/+WBnFTgEU4btA8QNMwl4APNAW9LiFr0rokigLYX+Vk7/JGvKmsA7my7b0c5q/wLh55wAkQb/gJyt4inss+Dy0tOg5AzKj9y+MZzF4U+MZAzBsANzSGpue8cS92BeAdUu4hJADumxq/BJbxZjenRvKX1nggZKqvjFxVxVjp+CPugbgrUWRAn1YT1MaEI/eyecNlIsC1hU33I3FrXTGB/KyLWg5FqTEhwC4K2o31M4N5V8S34yu/YBiBZqrsEyHUMQCP4cM0b6AqwRQNgRYX2wIz0Fuif8X9N4SYGn61bjHtCDeobfEQ0vQ4udAf+ot8WUXlzDTs4ACpXdvKP7SU94Hv9DgYbKqNhEflJUGT032rKubiL88SitcAaBZg0B4FrD4lTEBFr0J3F90FUDL94To/T35m8RzWWACim8FwL2S4Tpqwe0agHvNkxHWuIp4sPMAVoUMP92TP2nLT8BGXV3CfxrC9gMKpFYW49F5RbbRBITngfv9UBa1FwDVjFqOfWzM+MQKOQwlEuJ9aYxl1SBXgSxnYKSKkyaT/3/QkVeR1sK/R7YwtuI5FVI8C/ifJ6ywswubGRQ8DsSLDgWC84B1iXzHGMOy3ie72J1DAGpFZ2776vCUhB/Buj602Hxuq0CqEOHajL+rJVzUhA6runKTkaqNVNgx3BY8KU/VZCm14+8EQBwgLWpAXKDAUBVr8US8NlI1noBegziNnw/Z8nS8p8auC7RXyNGHbod0ZDjkyEvdciMW0+WjxpVltVsnXgaSN/FXxtgCfF4TZB/oQAc6UNAHwrfE+/Yl8JFJSA5kLGXbkzj4ePeQJ3mPAZ6U7et22lAatsEOeN+KiFSnQ3JscP+0Zf8TpefDAKiCaA4XUmUFK3f3DHeBrCBSlZlc5afnxFvo3RR5s+yYU4OfK8w50rsImYU1QalOCyHjQMnAz1I+UoVBDCC/nF+X3jGA5vd1E/lEtlRlWgv8jiV+5kzkSpaNFx7IoU0GpkyVjXJ0Eim+HHFcrsBbqncLUVTdc8h0xl6ft9asVofwJpAjUn3KZPcRgMewNLkn8i+8lDGt0Y3pNfqSeyXGFEAzzkQkah+puKwHIac4WF8oJrayngq+Nf+Ev5LCl1JzDLhWIKfwQT0AFyGXlj79IFgKB0M8dyqOzNC3Uwo/R/6cA7wcOXeu+pI+RLepodvQ3f3Qao3xYvVuj/mtU7m1UUUpvYyD6VNNBSRWyyFXPi5qUXoqazKQAk2W4cgI1rfZHMtAppWJDrLSHgVSt0JmDV8aDBpsLhP4jQt83vEGyvygrKYIgJ7gaHQSKGktYdUajERVcz5h4iPFt8IkHhsVnSygWww55moJuyodvjs5ORFryuR6fX1d0P23EOhHau+o/ULtM5eR6HkOvhsIyvf/ofYXPbudPbpm9A7395Ta3+C/AX8m/Aw2/T7COGsAyjKU1D7SMy5bfU/tIyaFn78COMzD3+P8Ru8VkGNN/9/R/z8Qpj315Qcwvm4/Kx/H11fUz+/Uzw3A+48Ohyj47m6/UVa+VRhzoLub4Vb0VYABALN1TDkbM89eAAAAAElFTkSuQmCC) no-repeat center center;
+}
+.demo-nav {
+	float:right;
+	margin:12px 0;
+	list-style:none;
+}
+.demo-nav-link {
+	
+}
+.demo-nav-link a {
+	color:#2BA6CB;
+	text-decoration:none;
+}
+.main {
+	max-width:1000px;
+	margin:0 auto;
+}
+.dummy-text {
+	padding:50px 0;
+}

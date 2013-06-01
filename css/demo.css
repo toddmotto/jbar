@@ -1,0 +1,91 @@
+/*
+	jBar v2.0.0
+	URL: www.toddmotto.com
+*/
+
+/*------------------------------------*\
+    jBar
+\*------------------------------------*/
+
+.jbar {
+	font-family:inherit; /* inherit your fonts */
+	background:#DB5903;
+	border-bottom:3px solid #FFF;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:998; /* set high to avoid possible existing z-indexes */
+	width:100%;
+}
+.jbar,
+.jbar-push {
+	display:none;
+	transition:margin-top .25s linear;
+	-webkit-transition:margin-top .25s linear;
+	-moz-transition:margin-top .25s linear;
+}
+.jbar-wrap {
+	padding:0 25px;
+	margin:8px 0;
+	text-align:center;
+}
+.jbar p {
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+.jbar p,
+.jbar-button {
+	color:#FFF;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+.jbar-button {
+	background:#333;
+	text-decoration:none;
+	margin:0 10px;
+	padding:5px 15px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+}
+.jbar-button:hover {
+	background:#222;
+}
+.jbar-up-toggle {
+	position:absolute;
+	top:0;
+	right:50px;
+	display:block;
+	padding:10px;
+}
+.jbar-down-toggle {
+	visibility:hidden;
+	position:fixed;
+	top:0;
+	right:50px;
+	z-index:999;
+	display:block;
+	padding:10px 10px 5px;
+	background:#DB5903;
+	border:3px solid #FFF;
+	border-top:none;
+	border-radius:0 0 4px 4px;
+	box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	transition:margin-top .15s linear;
+	-webkit-transition:margin-top .15s linear;
+	-moz-transition:margin-top .15s linear;
+}
+.jbar-up-arrow {
+	width:17px;
+	height:19px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAATCAMAAABBexbDAAAADFBMVEXu7u5JSUkAAAAAAABdVQ4zAAAABHRSTlOGfRIAX3wErQAAADtJREFUeNrNzrENACAMA8EH9t8ZKXrjFXDlXONwzEohsEMEdojAI4QSQgmhhFBCKDHxYjKLyvQfBPrbBQBhAvZmanT9AAAAAElFTkSuQmCC) no-repeat center center;
+}
+.jbar-down-arrow {
+	width:21px;
+	height:23px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAXCAMAAADTAfSvAAAAnFBMVEWgoKD///8PDw8RERH///+cnJyfn58rKyv///////////8mJib///////+ampr///+FhYX///////////////+Dg4P///////+Li4sGBgb///////////8hISGOjo7///////////+WlpaRkZH///////8vLy////////////////////8XFxf///8cHBz///8MDAwAAAAAAAAAAABgXTkEAAAANHRSTlNWJmUsKVVVMBsYOS8XGlMBSQUfMzVIBANLKjI4HS5NNx4vUE8tJDE6IzQrNiwhLQIrYSkAN4qAdAAAAIRJREFUeNrdz0UWwzAQA9ApMyVlprATt9b979bWjuH5CNVu/mYkgsxbR521Cp2/0qj5G2pUzaaSKuElzglRl3mYjAlodFou9pKB/NaeviyOhhNIneV3w6dDXzfjz0fN1eVo+/LbeSexuLor+H77RVaUcBWbbC5YptAq1stVmMJXLAKD+AAYmVm/0d4W0wAAAABJRU5ErkJggg==) no-repeat center center;
+}
