@@ -52,7 +52,7 @@
 		createButton: function () {
 			if (this.jsonConfig.button && this.jsonConfig.url) {
 				this.$elem.children('.jbar-wrap').append(
-					$('<a href="' + this.jsonConfig.url + '" class="jbar-button">' + this.jsonConfig.button + '</p>')
+					$('<a href="' + this.jsonConfig.url + '" class="jbar-button">' + this.jsonConfig.button + '</a>')
 				)
 			}
 			return this
